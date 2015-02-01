@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=11, maximum-scale=1, user-scalable=yes">
+<head>
+    <title>生成表格</title>
+    <link rel="stylesheet" type="text/css" href="css/mytablestyle.css">
+
+    <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript">
+	function report(titleArray, dataArrays){ 
+	    
+		
+		var table = $("<table border=\"1\"></table>"); 
+		// title
+		var trTitle = $("<tr></tr>"); 
+		trTitle.appendTo(table);
+		for(var i = 0; i < titleArray.length; i++) {
+			var th = $("<th>" + titleArray[i] + "</th>");
+			th.appendTo(trTitle);
+		}
+		// body
+		for(var i = 0; i < dataArrays.length; i++){ 
+			var tr = $("<tr></tr>"); 
+			tr.appendTo(table); 
+			for(var j = 0; j < dataArrays[i].length; j++){ 
+				var td = $("<td>" + dataArrays[i][j] + "</td>"); 
+				td.appendTo(tr); 
+			} 
+		} 
+		
+		$("#report").append(table); 
+	} 
+	
+	function clearTableData() {
+		$("#report").html("");
+	}
+	
+	function setData(titleArrayStr, dataArraysStr) {
+		clearTableData();
+		report(JSON.parse(titleArrayStr), JSON.parse(dataArraysStr));
+	}
+	
+	$(document).ready(function() {
+	});  
+</script>
+</head>
+
+<body>
+<div id="report" class="report" style="width:100%"></div>
+</body>
+</html> 

@@ -1,0 +1,42 @@
+table {  
+	*border-collapse: collapse; /* IE7 and lower */  
+	border-spacing: 0;  
+	width: 100%;  
+}  
+  
+.report tr:hover {  
+	background: #fbf8e9;  
+	-o-transition: all 0.1s ease-in-out;  
+	-webkit-transition: all 0.1s ease-in-out;  
+	-moz-transition: all 0.1s ease-in-out;  
+	-ms-transition: all 0.1s ease-in-out;  
+	transition: all 0.1s ease-in-out;  
+}  
+  
+.report td , .report th {  
+	border-left: 1px solid #ccc;  
+	border-top: 1px solid #ccc;  
+	padding: 10px;  
+	text-align: center;  
+	word-break:keep-all;             /* 不换行 */
+	white-space:nowrap;            /* 不换行 */
+}
+  
+.report th {  
+	background-color: #dce9f9;  
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#ebf3fc), to(#dce9f9));  
+	background-image: -webkit-linear-gradient(top, #ebf3fc, #dce9f9);  
+	background-image: -moz-linear-gradient(top, #ebf3fc, #dce9f9);  
+	background-image: -ms-linear-gradient(top, #ebf3fc, #dce9f9);  
+	background-image: -o-linear-gradient(top, #ebf3fc, #dce9f9);  
+	background-image: linear-gradient(top, #ebf3fc, #dce9f9);  
+	-webkit-box-shadow: 0 1px 0 rgba(255,255,255,.8) inset;  
+	-moz-box-shadow:0 1px 0 rgba(255,255,255,.8) inset;  
+	box-shadow: 0 1px 0 rgba(255,255,255,.8) inset;  
+	border-top: none;  
+	text-shadow: 0 1px 0 rgba(255,255,255,.5);  
+}  
+
+.report td:first-child, .report th:first-child {  
+	border-left: none;  
+}  
